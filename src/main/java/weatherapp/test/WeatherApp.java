@@ -46,7 +46,7 @@ class APIHelper {
     public String getLocationData(double lon, double lat) {
         // build API url with zipcode parameter
         String urlString = "http://api.openweathermap.org/geo/1.0/reverse?lat=" + lat + "&lon=" +lon + "&limit=1&appid=b60d7b0a5ce799edc23dd07e098249a4";
-       String cityName;
+        String cityName;
         
         try{
             // call api and get a response
@@ -181,4 +181,3 @@ class APIHelper {
         } // end while
     } // end getZipCode()
 } // end class
-
