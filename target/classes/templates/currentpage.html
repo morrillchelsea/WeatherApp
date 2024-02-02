@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html th:replace="~{base :: base(~{::title}, ~{::section})}">
+<head>
+    <title>Current Weather</title>
+</head>
+<body>
+<section>
+    <!--Block content-->
+    <h1>Current Weather</h1>
+    <!--Output Zip Code-->
+    <p th:text="${zipcode}"></p>
+    <!--Output Name of City-->
+    <p th:text="${cityName}"></p>
+    <!--Output Current Weather Conditions-->
+    <p>Current Conditions:</p>
+    <p th:text="${mainWeather}"></p>
+    <!--Output Temperature in Fahrenheit-->
+    <p>Temperature (Fahrenheit)</p>
+    <p th:text="${temp}"></p>
+    <!--Output Humidity-->
+    <p>Humidity (%)</p>
+    <p th:text="${humidity}"></p>
+</section>
+</body>
+</html>

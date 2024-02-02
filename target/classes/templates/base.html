@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html th:fragment="base (title, content)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--Modifies site title-->
+    <title th:replace="${title}">Nieves Weather App</title>
+    <!--Link to style sheet-->
+	<link th:href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Block content-->
+    <div th:replace="${content}">
+    </div>
+</body>
+</html>

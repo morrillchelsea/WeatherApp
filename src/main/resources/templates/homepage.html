@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html th:replace="~{base :: base(~{::title}, ~{::section})}">
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <section>
+        <h1>Welcome to the Nieves Weather Application</h1>
+        <h3>Please enter your zip code to get current wather data for your location: </h3>
+        <form action = "/current" method="POST">
+            <input type="text" name="zipCode"><br>
+            <!--Submission button to submit data-->
+            <input type="submit" value = "Submit">
+        </form>
+    </section>
+</body>
+</html>
