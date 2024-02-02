@@ -1,11 +1,13 @@
 .header {
     text-align: center;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Proxima Nova", cursive, sans-serif;
     font-size: 20px;
     letter-spacing: 0.2px;
     word-spacing: 2px;
+    background-color: #fefae0
     }
 body {
     text-align: center;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Proxima Nova", cursive, sans-serif;
+    background-color: #fefae0
     }
