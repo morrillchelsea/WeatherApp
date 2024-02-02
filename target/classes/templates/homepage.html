@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html th:replace="~{base :: base(~{::title}, ~{::section})}">
-<head>
-    <title>Home</title>
-</head>
-<body>
-    <section>
-        <h1>Welcome to the Nieves Weather Application</h1>
-        <h3>Please enter your zip code to get current wather data for your location: </h3>
-        <form action = "/current" method="POST">
-            <input type="text" name="zipCode"><br>
-            <!--Submission button to submit data-->
-            <input type="submit" value = "Submit">
-        </form>
-    </section>
-</body>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <section>
+            <div>
+                <form action = "/current" method="POST">
+                    <input type="text" name="zipCode" placeholder = "Enter 5-digit zip code...">
+                    <!--Submission button to submit data-->
+                    <input type="submit" value = "&#x1F50D;">
+                </form>
+            </div>
+        </section>
+    </body>
 </html>

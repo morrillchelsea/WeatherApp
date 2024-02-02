@@ -12,12 +12,14 @@ import java.util.Scanner;
 public class WeatherData {
     private String cityName; // city name assoc w provided zip code
     private String conditions; // main weather conditions (i.e. rain, clear, etc.)
+    private String icon; // string variable to hold icon code for html styling
     private double temp; // in fahrenheit
     private double humidity; // % humidity
 
-    public WeatherData(String cityName, String conditions, double temp, double humidity) {
+    public WeatherData(String cityName, String conditions, String icon, double temp, double humidity) {
         this.cityName = cityName;
         this.conditions = conditions;
+        this.icon = icon;
         this.temp = temp;
         this.humidity = humidity;
     } //end constructor
@@ -43,6 +45,10 @@ public class WeatherData {
         return this.humidity;
     }
 
+    public String getIcon() {
+        return this.icon;
+    } // end getIcon
+
     // Setter methods
     //public void setZipCode(int zipCode) {
     //    this.zipCode = zipCode;
@@ -63,6 +69,10 @@ public class WeatherData {
     public void setHumidity(double humidity) {
         this.humidity = humidity;
     }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    } // end setIcon
 
     private HttpURLConnection fetchApiResponse(String urlString){
         try{
@@ -168,14 +178,17 @@ public class WeatherData {
                 
                 // assign response to var
                 String mainWeather = (String) weatherData.get("main");
+                String icon = (String) weatherData.get("icon");
                 double temp = (double) mainObject.get("temp");
                 long humidity = (long) mainObject.get("humidity");
                 double longitude = (double) locationObject.get("lon");
                 double latitude = (double) locationObject.get("lat");
                 setCityName(getLocationData(longitude, latitude));
                 setConditions(mainWeather);
+                setIcon(icon);
                 setTemp(temp);
                 setHumidity(humidity);
+
             } // end if/else
         } catch (Exception e) {
             System.out.println("API Error: " + e);

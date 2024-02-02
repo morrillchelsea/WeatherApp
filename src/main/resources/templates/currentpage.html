@@ -5,21 +5,26 @@
 </head>
 <body>
 <section>
-    <!--Block content-->
-    <h1>Current Weather</h1>
-    <!--Output Zip Code-->
-    <p th:text="${zipcode}"></p>
-    <!--Output Name of City-->
-    <p th:text="${cityName}"></p>
-    <!--Output Current Weather Conditions-->
-    <p>Current Conditions:</p>
-    <p th:text="${mainWeather}"></p>
-    <!--Output Temperature in Fahrenheit-->
-    <p>Temperature (Fahrenheit)</p>
-    <p th:text="${temp}"></p>
-    <!--Output Humidity-->
-    <p>Humidity (%)</p>
-    <p th:text="${humidity}"></p>
+    <div>
+        <form action = "/current" method="POST">
+            <input type="text" name="zipCode" placeholder = "Enter 5-digit zip code...">
+            <!--Submission button to submit data-->
+            <input type="submit" value = "&#x1F50D;">
+        </form>
+    </div>
+    <div>
+        <!--Block content-->
+        <h3>Current Weather</h3>
+        <img th:src="${iconImg}" alt="weatherimg">
+        <!--Output Zip Code and City Name-->
+        <h3 th:text="${cityName} + ' (' + ${zipCode} + ')'"></h3>
+        <!--Output Current Weather Conditions-->
+        <p th:text="|Current Conditions: ${mainWeather}|"></p>
+        <!--Output Temperature in Fahrenheit-->
+        <p th:text="|Temperature: ${temp}&deg;F|"></p>
+        <!--Output Humidity-->
+        <p th:text="|Humidity: ${humidity}%|"></p>
+    </div>
 </section>
 </body>
 </html>
