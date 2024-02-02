@@ -5,14 +5,14 @@
 </head>
 <body>
 <section>
-    <div>
+    <div class = "searchbar">
         <form action = "/current" method="POST">
             <input type="text" name="zipCode" placeholder = "Enter 5-digit zip code...">
             <!--Submission button to submit data-->
             <input type="submit" value = "&#x1F50D;">
         </form>
     </div>
-    <div>
+    <div class = "weatherdata">
         <!--Block content-->
         <h3>Current Weather</h3>
         <img th:src="${iconImg}" alt="weatherimg">
