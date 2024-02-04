@@ -11,8 +11,8 @@ body {
 }
 
 .home {
-  width: 300px;
-  height: 400px;
+  width: 420px;
+  height: auto;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@ body {
 
 .search-bar {
   width: 185px;
-  height: 100px;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,16 +44,45 @@ body {
   width: var(--dl-size-size-medium);
   height: var(--dl-size-size-small);
 }
+.citydata {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.citydata p {
+    font-size: 28px;
+    font-style: bold;
+}
+
+.tempdata {
+    flex: 0 0 auto;
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+}
+
+.tempdata h1 {
+    font-size: 60px;
+}
+
 .weatherdata {
-  flex: 0 0 auto;
-  width: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+    flex: 0 0 auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 .weathericon {
     flex: 0 0 auto;
-    width: auto;
+    width: 50%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -61,17 +90,22 @@ body {
 }
 
 .image {
-  width: var(--dl-size-size-medium);
-  height: var(--dl-size-size-medium);
+  width: var(--dl-size-size-small);
+  height: var(--dl-size-size-small);
   align-self: center;
-  object-fit: cover;
+  object-fit: none;
 }
+
 .weathertxt {
   flex: 0 0 auto;
-  width: auto;
+  width: 50%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.weathertxt h1 {
+    font-size: 30px;
 }

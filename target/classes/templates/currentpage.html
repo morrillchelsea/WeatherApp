@@ -21,6 +21,13 @@ xmlns:th="http://www.thymeleaf.org">
                 value = "&#x1F50D;">
             </form>
         </div>
+        <div class = "citydata">
+            <p th:text="${cityName} + ' (' + ${zipCode} + ')'"></p>
+        </div>
+        <div class = "tempdata">
+            <!--Output Temperature in Fahrenheit-->
+            <h1 th:text="|${temp}&deg;F|"></h1>
+        </div>
         <div class = "weatherdata">
             <div class = "weathericon">
                 <img 
@@ -29,11 +36,8 @@ xmlns:th="http://www.thymeleaf.org">
                 alt="weathericon">
             </div>
             <div class = "weathertxt">
-                <h3 th:text="${cityName} + ' (' + ${zipCode} + ')'"></h3>
                 <!--Output Current Weather Conditions-->
-                <p th:text="|Current Conditions: ${mainWeather}|"></p>
-                <!--Output Temperature in Fahrenheit-->
-                <p th:text="|Temperature: ${temp}&deg;F|"></p>
+                <p th:text="${mainWeather}"></p>
                 <!--Output Humidity-->
                 <p th:text="|Humidity: ${humidity}%|"></p>
             </div>
