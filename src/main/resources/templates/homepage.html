@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html th:replace="~{base :: base(~{::title}, ~{::section})}">
+<html th:replace="~{base :: base(~{::title}, ~{::section})}"
+xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Home</title>
     </head>
     <body>
-        <section>
+        <section class = home>
             <div class = "searchbar">
                 <form action = "/current" method="POST">
                     <input type="text" name="zipCode" placeholder = "Enter 5-digit zip code...">

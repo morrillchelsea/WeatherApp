@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html th:replace="~{base :: base(~{::title}, ~{::section})}">
+<html th:replace="~{base :: base(~{::title}, ~{::section})}"
+xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Current Weather</title>
 </head>
 <body>
-<section>
-    <div class = "searchbar">
-        <form action = "/current" method="POST">
-            <input type="text" name="zipCode" placeholder = "Enter 5-digit zip code...">
-            <!--Submission button to submit data-->
-            <input type="submit" value = "&#x1F50D;">
-        </form>
-    </div>
-    <div class = "weatherdata">
-        <!--Block content-->
-        <h3>Current Weather</h3>
-        <img th:src="${iconImg}" alt="weatherimg">
-        <!--Output Zip Code and City Name-->
-        <h3 th:text="${cityName} + ' (' + ${zipCode} + ')'"></h3>
-        <!--Output Current Weather Conditions-->
-        <p th:text="|Current Conditions: ${mainWeather}|"></p>
-        <!--Output Temperature in Fahrenheit-->
-        <p th:text="|Temperature: ${temp}&deg;F|"></p>
-        <!--Output Humidity-->
-        <p th:text="|Humidity: ${humidity}%|"></p>
-    </div>
+    <section class = home>
+        <div class = "searchbar">
+            <form class = "search-bar" action = "/current" method="POST">
+                <input 
+                class = "search-bar-input"
+                type="text" 
+                name="zipCode" 
+                placeholder = "Enter 5-digit zip code...">
+
+                <!--Submission button to submit data-->
+                <input
+                class = "search-bar-button"
+                type="submit"
+                value = "&#x1F50D;">
+            </form>
+        </div>
+        <div class = "weatherdata">
+            <div class = "weathericon">
+                <img 
+                class = "icon"
+                th:src="${iconImg}"
+                alt="weathericon">
+            </div>
+            <div class = "weathertxt">
+                <h3 th:text="${cityName} + ' (' + ${zipCode} + ')'"></h3>
+                <!--Output Current Weather Conditions-->
+                <p th:text="|Current Conditions: ${mainWeather}|"></p>
+                <!--Output Temperature in Fahrenheit-->
+                <p th:text="|Temperature: ${temp}&deg;F|"></p>
+                <!--Output Humidity-->
+                <p th:text="|Humidity: ${humidity}%|"></p>
+            </div>
+        </div>
 </section>
 </body>
 </html>

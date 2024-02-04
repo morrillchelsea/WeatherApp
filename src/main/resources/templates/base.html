@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html th:fragment="base (title, content)" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" 
+ th:fragment="base (title, content)" 
+ xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <!--Modifies site title-->
     <title th:replace="${title}">Nieves Weather App</title>
     <!--Link to style sheet-->
 	<link th:href="styles.css" rel="stylesheet" />
-    <h1>Nieves Weather Application</h1>
 </head>
 <body>
     <!--Block content-->
