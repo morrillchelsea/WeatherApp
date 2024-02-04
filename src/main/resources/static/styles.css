@@ -13,18 +13,22 @@ body {
 .home {
   width: 300px;
   height: 400px;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
   position: relative;
   flex-direction: column;
   background-color: white;
+  opacity : 0.8;
 }
+
 .searchbar {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
+
 .search-bar {
   width: 185px;
   height: 100px;
