@@ -15,13 +15,17 @@ public class WeatherData {
     private String icon; // string variable to hold icon code for html styling
     private double temp; // in fahrenheit
     private double humidity; // % humidity
+    private double lo; // min temp of the day in fahrenheit
+    private double hi; // max temp of the day in fahrenheit
 
-    public WeatherData(String cityName, String conditions, String icon, double temp, double humidity) {
+    public WeatherData(String cityName, String conditions, String icon, double temp, double humidity, double lo, double hi) {
         this.cityName = cityName;
         this.conditions = conditions;
         this.icon = icon;
         this.temp = temp;
         this.humidity = humidity;
+        this.lo = lo;
+        this.hi = hi;
     } //end constructor
     
     // Getter methods
@@ -49,6 +53,14 @@ public class WeatherData {
         return this.icon;
     } // end getIcon
 
+    public double getLo(){
+        return this.lo;
+    }
+
+    public double getHi(){
+        return this.hi;
+    }
+
     // Setter methods
     //public void setZipCode(int zipCode) {
     //    this.zipCode = zipCode;
@@ -73,6 +85,14 @@ public class WeatherData {
     public void setIcon(String icon) {
         this.icon = icon;
     } // end setIcon
+
+    public void setLo(double lo) {
+        this.lo = lo;
+    }
+
+    public void setHi(double hi) {
+        this.hi = hi;
+    }
 
     private HttpURLConnection fetchApiResponse(String urlString){
         try{
@@ -181,6 +201,8 @@ public class WeatherData {
                 String icon = (String) weatherData.get("icon");
                 double temp = (double) mainObject.get("temp");
                 long humidity = (long) mainObject.get("humidity");
+                double hi = (double) mainObject.get("temp_max");
+                double lo = (double) mainObject.get("temp_min");
                 double longitude = (double) locationObject.get("lon");
                 double latitude = (double) locationObject.get("lat");
                 setCityName(getLocationData(longitude, latitude));
@@ -188,7 +210,8 @@ public class WeatherData {
                 setIcon(icon);
                 setTemp(temp);
                 setHumidity(humidity);
-
+                setHi(hi);
+                setLo(lo);
             } // end if/else
         } catch (Exception e) {
             System.out.println("API Error: " + e);

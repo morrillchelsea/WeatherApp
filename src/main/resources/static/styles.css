@@ -8,11 +8,12 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    visibility: visible;
 }
 
 .home {
   width: 420px;
-  height: auto;
+  height: 450px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -24,7 +25,7 @@ body {
 
 .searchbar {
   width: 100%;
-  height: 75px;
+  height: 400;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -32,11 +33,11 @@ body {
 
 .search-bar {
   width: 185px;
-  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .search-bar-input {
   width: 100%;
   height: var(--dl-size-size-small);
@@ -56,9 +57,8 @@ body {
     padding: 10px;
 }
 
-.citydata p {
-    font-size: 28px;
-    font-style: bold;
+.citydata h1 {
+    font-size: 35px;
 }
 
 .tempdata {

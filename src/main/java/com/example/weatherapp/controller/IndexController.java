@@ -17,25 +17,31 @@ public class IndexController {
 
     @PostMapping("/current")
     public String outputWeather (int zipCode, Model model) {
+        // declare variables
         String cityName;
         String mainWeather;
         String icon;
         double humidity;
-        double temp;
+        int temp;
+        int lo;
+        int hi;
         String iconImg;
 
         // Create instance of weather data class
-        WeatherData wd = new WeatherData(null, null, null, 0.0, 0.0);
+        WeatherData wd = new WeatherData(null, null, null, 0.0, 0.0, 0.0, 0.0);
         
         wd.getWeatherData(zipCode);
 
-        // declare variables
         cityName = wd.getCityName();
         icon = wd.getIcon();
-        temp = wd.getTemp();
+        temp = (int) wd.getTemp(); // cast double type return value to int
+        lo = (int) wd.getLo();
+        hi = (int) wd.getHi();
         mainWeather = wd.getConditions();
         humidity = wd.getHumidity();
 
+        System.out.println("Lo " + lo + " Hi " + hi);
+        
         iconImg = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
 
         System.out.println(iconImg);
@@ -46,6 +52,8 @@ public class IndexController {
         model.addAttribute("mainWeather", mainWeather);
         model.addAttribute("iconImg", iconImg);
         model.addAttribute("temp", temp);
+        model.addAttribute("lo", lo);
+        model.addAttribute("hi", hi);
         model.addAttribute("humidity", humidity);
         return "currentpage";
     }

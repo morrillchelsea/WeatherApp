@@ -22,7 +22,7 @@ xmlns:th="http://www.thymeleaf.org">
             </form>
         </div>
         <div class = "citydata">
-            <p th:text="${cityName} + ' (' + ${zipCode} + ')'"></p>
+            <h1 th:text="${cityName} + ' (' + ${zipCode} + ')'"></h1>
         </div>
         <div class = "tempdata">
             <!--Output Temperature in Fahrenheit-->
@@ -38,6 +38,7 @@ xmlns:th="http://www.thymeleaf.org">
             <div class = "weathertxt">
                 <!--Output Current Weather Conditions-->
                 <p th:text="${mainWeather}"></p>
+                <p th:utext="'Hi: ' +  ${hi} + '&deg;F | Lo: ' + ${lo} + '&deg;F'"></p>
                 <!--Output Humidity-->
                 <p th:text="|Humidity: ${humidity}%|"></p>
             </div>
