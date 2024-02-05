@@ -5,12 +5,12 @@
 - Implements Object Oriented Programming
 - Parses JSON data from OpenWeather’s OpenSource API
 
-![alt text](https://github.com/morrillchelsea/WeatherApp/blob/Spring/weatherApp1.png?raw=true)
-
-![alt text](https://github.com/morrillchelsea/WeatherApp/blob/Spring/weatherApp.png?raw=true)
-
 ## Future Changes
 - Implement error handling
   -  Users should not be able to directly access /current without first providing a valid zip code
 -  Input validation for zip code variable
 -  Add missing comments/docstrings to program files
+
+![alt text](https://github.com/morrillchelsea/WeatherApp/blob/Spring/weatherApp1.png?raw=true)
+
+![alt text](https://github.com/morrillchelsea/WeatherApp/blob/Spring/weatherApp.png?raw=true)
