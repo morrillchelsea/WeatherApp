@@ -3,7 +3,6 @@ body {
     display: flex;
     justify-content: center;
     background-image: url("weatherbg.avif");
-    background-image: url("weatherbg.avif");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -24,23 +23,23 @@ body {
 }
 
 .searchbar {
-  width: 100%;
-  height: 400;
+  flex: 0 0 auto;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: row;
 }
 
 .search-bar {
-  width: 185px;
+  width: 50%;
+  height: 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .search-bar-input {
   width: 100%;
   height: var(--dl-size-size-small);
+  font-size: 16px;
 }
 .search-bar-button {
   width: var(--dl-size-size-medium);
