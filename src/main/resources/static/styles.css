@@ -1,115 +1,127 @@
 body {
-    font-family: "Proxima Nova", cursive, sans-serif;
-    display: flex;
-    justify-content: center;
-    background-image: url("weatherbg.avif");
-    background-image: url("weatherbg.avif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    visibility: visible;
+  font-family: "Proxima Nova", cursive, sans-serif;
+  display: flex;
+  justify-content: center;
+  background-image: url("weatherbg.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  visibility: visible;
 }
 
 .home {
-  width: 420px;
-  height: 450px;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  flex-direction: column;
-  background-color: white;
-  opacity : 0.8;
+width: 420px;
+height: 450px;
+border-radius: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+flex-direction: column;
+background-color: white;
+opacity : 0.8;
 }
 
 .searchbar {
-  width: 100%;
-  height: 400;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+flex: 0 0 auto;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: row;
 }
 
 .search-bar {
-  width: 185px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+width: 100%;
+height: 40px;
+display: flex;
 }
 
 .search-bar-input {
-  width: 100%;
-  height: var(--dl-size-size-small);
+width: 100%;
+height: var(--dl-size-size-medium);
+font-size: 16px;
 }
 .search-bar-button {
-  width: var(--dl-size-size-medium);
-  height: var(--dl-size-size-small);
+width: var(--dl-size-size-medium);
+height: var(--dl-size-size-small);
 }
 .citydata {
-    flex: 0 0 auto;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
+  flex: 0 0 auto;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
 }
 
 .citydata h1 {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .tempdata {
-    flex: 0 0 auto;
-    width: auto;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-self: center;
-    align-items: center;
-    padding: 10px;
+  flex: 0 0 auto;
+  width: auto;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .tempdata h1 {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 .weatherdata {
-    flex: 0 0 auto;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-.weathericon {
-    flex: 0 0 auto;
-    width: 50%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.image {
-  width: var(--dl-size-size-small);
-  height: var(--dl-size-size-small);
+  flex: 0 0 auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
   align-self: center;
-  object-fit: none;
+  align-items: center;
+  padding: 10px;
 }
 
-.weathertxt {
+.weathericon {
   flex: 0 0 auto;
   width: 50%;
   height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.image {
+width: var(--dl-size-size-small);
+height: var(--dl-size-size-small);
+align-self: center;
+object-fit: none;
+}
+
+.weathertxt {
+flex: 0 0 auto;
+width: 50%;
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+align-self: center;
+padding: 10px;
 }
 
 .weathertxt h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
