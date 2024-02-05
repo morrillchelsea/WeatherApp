@@ -23,6 +23,10 @@ background-color: white;
 opacity : 0.8;
 }
 
+.home h1 {
+  font-size: 35px;
+}
+
 .searchbar {
 flex: 0 0 auto;
 display: flex;
@@ -46,6 +50,7 @@ font-size: 16px;
 width: var(--dl-size-size-medium);
 height: var(--dl-size-size-small);
 }
+
 .citydata {
   flex: 0 0 auto;
   width: 100%;
