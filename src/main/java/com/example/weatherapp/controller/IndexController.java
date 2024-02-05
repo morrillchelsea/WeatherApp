@@ -20,31 +20,29 @@ public class IndexController {
         // declare variables
         String cityName;
         String mainWeather;
-        String icon;
-        double humidity;
-        int temp;
-        int lo;
-        int hi;
-        String iconImg;
+        String icon; // variable to hold icon code
+        double humidity; // humidity %
+        int temp; // temperature in Fahrenheit
+        int lo; // min temp of the day
+        int hi; // max temp of the day
+        String iconImg; // URL string to query img from API
 
         // Create instance of weather data class
         WeatherData wd = new WeatherData(null, null, null, 0.0, 0.0, 0.0, 0.0);
         
+        // call method to query weather from API
         wd.getWeatherData(zipCode);
 
         cityName = wd.getCityName();
-        icon = wd.getIcon();
+        icon = wd.getIcon(); 
         temp = (int) wd.getTemp(); // cast double type return value to int
-        lo = (int) wd.getLo();
-        hi = (int) wd.getHi();
-        mainWeather = wd.getConditions();
+        lo = (int) wd.getLo(); 
+        hi = (int) wd.getHi(); 
+        mainWeather = wd.getConditions(); // weather conditions (e.g. rain, clear, mist, ...)
         humidity = wd.getHumidity();
-
-        System.out.println("Lo " + lo + " Hi " + hi);
         
+        // create url String with icon code to query API
         iconImg = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
-
-        System.out.println(iconImg);
 
         // add models
         model.addAttribute("zipCode", zipCode);
