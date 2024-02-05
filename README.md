@@ -6,4 +6,4 @@
 - Implements Object Oriented Programming
 - Parses JSON data from OpenWeather’s OpenSource API
 
-![alt text](https://github.com/morrillchelsea/WeatherApp/blob/Spring/weatherResults.png?raw=true)
+![alt text](https://github.com/morrillchelsea/WeatherApp/blob/Spring/weatherApp.png?raw=true)
